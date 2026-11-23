@@ -1,0 +1,1 @@
+Synthetic example data may be committed under `data/examples/`. Never commit real audio, private call logs, personal data, or raw trial-level annotations. Real data belongs in an ignored private directory.

@@ -1,0 +1,31 @@
+.env
+.env.local
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+*.egg-info/
+.DS_Store
+artifacts/calls/*
+!artifacts/calls/.gitkeep
+
+# Research data must be private by default
+data/private/
+data/real/
+data/trials*.jsonl
+results/*
+!results/.gitkeep
+
+# Treat all generated call artifacts and logs as private
+artifacts/*
+!artifacts/calls/
+artifacts/calls/*
+!artifacts/calls/.gitkeep
+logs/
+recordings/
+transcripts/
+
+# Local authorization records and real-study annotations
+private/
+*.secrets.json

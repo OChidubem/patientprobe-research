@@ -1,0 +1,33 @@
+[build-system]
+requires = ["setuptools>=70", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "patientprobe"
+version = "0.1.0"
+description = "Reproducible research evaluation of conversational voice-agent reliability"
+readme = "README.md"
+requires-python = ">=3.11,<3.14"
+dependencies = [
+  "livekit-agents[deepgram,openai,silero]>=1.8,<2",
+  "livekit-api>=1,<2",
+  "python-dotenv>=1,<2",
+  "numpy>=1.26,<3",
+  "openai>=1.50,<3",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8,<10", "ruff>=0.7"]
+
+[project.scripts]
+patientprobe = "patientprobe.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
+
+[tool.ruff]
+line-length = 100
